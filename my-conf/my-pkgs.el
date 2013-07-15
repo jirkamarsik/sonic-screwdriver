@@ -21,6 +21,7 @@
                       elisp-slime-nav
                       clojure-mode
                       nrepl
+                      markdown-mode
                       color-theme-solarized)
   "A list of packages that should be installed.")
 

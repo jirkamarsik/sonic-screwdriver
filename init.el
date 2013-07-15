@@ -13,6 +13,7 @@
                        "spell"
                        "text"
                        "latex"
+                       "markdown"
                        "misc"
                        "bindings"
                        "theme"))
