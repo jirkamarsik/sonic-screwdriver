@@ -1,17 +1,15 @@
-;; Setup package.el to use MELPA (http://melpa.milkbox.net/).
-(require 'package)
-(add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-initialize)
-
-;; Download the package list from MELPA.
-(when (not package-archive-contents)
-  (package-refresh-contents))
-
-;; Install the desired packages from MELPA.
-(defvar my-packages '(better-defaults)
-  "A list of packages to ensure they are installed at launch.")
-
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
+;; Load my configuration files.
+(add-to-list 'load-path "~/.emacs.d/my-conf")
+(load "my-defuns")
+(load "my-pkgs")
+(load "my-ido")
+(load "my-smex")
+(load "my-evil")
+(load "my-prog")
+(load "my-elisp")
+(load "my-clojure")
+(load "my-text")
+(load "my-latex")
+(load "my-misc")
+(load "my-bindings")
+(load "my-theme")
