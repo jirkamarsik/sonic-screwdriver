@@ -10,6 +10,7 @@
                        "prog"
                        "elisp"
                        "clojure"
+                       "spell"
                        "text"
                        "latex"
                        "misc"

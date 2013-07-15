@@ -5,6 +5,5 @@
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
 
-;; More comfortable switching of spellcheck dictionaries.
-(eval-after-load "flyspell"
-  '(define-key flyspell-mode-map (kbd "C-c d") 'ispell-change-dictionary))
+;; More comfortable switching of spell-checker dictionaries.
+(global-set-key (kbd "<f6>") 'cycle-ispell-languages)
