@@ -14,6 +14,7 @@
                        "text"
                        "latex"
                        "markdown"
+                       "git"
                        "misc"
                        "bindings"
                        "theme"))
