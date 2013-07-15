@@ -1,0 +1,1 @@
+/home/jirka/Projects/nrepl-discover/nrepl-discover.el
