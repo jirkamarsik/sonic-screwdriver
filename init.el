@@ -1,15 +1,18 @@
-;; Load my configuration files.
+;; Include my configuration scripts in the load-path.
 (add-to-list 'load-path "~/.emacs.d/my-conf")
-(load "my-defuns")
-(load "my-pkgs")
-(load "my-ido")
-(load "my-smex")
-(load "my-evil")
-(load "my-prog")
-(load "my-elisp")
-(load "my-clojure")
-(load "my-text")
-(load "my-latex")
-(load "my-misc")
-(load "my-bindings")
-(load "my-theme")
+
+;; Load all the parts of my configuration.
+(dolist (section-name ("defuns"
+                       "pkgs"
+                       "ido"
+                       "smex"
+                       "evil"
+                       "prog"
+                       "elisp"
+                       "clojure"
+                       "text"
+                       "latex"
+                       "misc"
+                       "bindings"
+                       "theme"))
+  (load (concat "my-" section-name)))

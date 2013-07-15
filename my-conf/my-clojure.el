@@ -1,8 +1,8 @@
 ;; Turn on the goodies for clojure-mode (and nrepl mode).
-(dolist (hook '(paredit-mode
-                rainbow-delimiters-mode))
-  (dolist (attachment-point '(clojure-mode-hook
-                              nrepl-mode-hook))
+(dolist (attachment-point '(clojure-mode-hook
+                            nrepl-mode-hook))
+  (dolist (hook '(paredit-mode
+                  rainbow-delimiters-mode))
     (add-hook attachment-point hook)))
 
 ;; Use Clojure syntax highlighting in the REPL buffer.
