@@ -23,7 +23,7 @@
                       nrepl
                       git-gutter
                       markdown-mode
-                      color-theme-solarized)
+                      solarized-theme)
   "A list of packages that should be installed.")
 
 ;; Check and install all the packages.
