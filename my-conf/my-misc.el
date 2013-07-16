@@ -11,4 +11,4 @@
 (column-number-mode)
 
 ;; Always highlight the current line.
-(hl-line-mode)
+(global-hl-line-mode)
