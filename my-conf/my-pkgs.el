@@ -21,6 +21,7 @@
                       elisp-slime-nav
                       clojure-mode
                       nrepl
+                      haskell-mode
                       git-gutter
                       markdown-mode
                       solarized-theme)
