@@ -11,6 +11,7 @@
                         "prog"
                         "elisp"
                         "clojure"
+                        "haskell"
                         "spell"
                         "text"
                         "latex"
