@@ -24,7 +24,8 @@
                       haskell-mode
                       git-gutter
                       markdown-mode
-                      solarized-theme)
+                      solarized-theme
+                      scala-mode2)
   "A list of packages that should be installed.")
 
 ;; Check and install all the packages.
