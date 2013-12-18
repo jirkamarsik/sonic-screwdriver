@@ -1,10 +1,21 @@
 ;;; Cycling through a ring of spell-checker languages.
 ;;; Source: EmacsWiki/DiogoRamos
 
-;; Defining the language ring.
-(let ((langs '("english" "french")))
-  (setq lang-ring (make-ring (length langs)))
-  (dolist (elem langs) (ring-insert lang-ring elem)))
+(defvar default-spell-check-lang "english"
+  "Default language for spell-checking to use in new buffer.")
+
+(defvar other-spell-check-langs '("french")
+  "Other languages to make available in the lang-ring.")
+
+(defun initialize-lang-ring ()
+  (let ((langs (append other-spell-check-langs
+                       (list default-spell-check-lang))))
+    (setq-local lang-ring (make-ring (length langs)))
+    (dolist (elem langs) (ring-insert lang-ring elem))
+    (ispell-change-dictionary default-spell-check-lang)))
+
+;; Defining the language ring per spell-checked buffer.
+(add-hook 'flyspell-mode-hook (function initialize-lang-ring))
 
 ;; A function to switch the spellchecker to the next language in the ring.
 (defun cycle-ispell-languages ()
