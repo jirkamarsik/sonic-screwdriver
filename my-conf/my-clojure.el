@@ -1,6 +1,10 @@
-;; Turn on the goodies for clojure-mode (and nrepl mode).
+;; Loading my manual installation of CIDER.
+(add-to-list 'load-path (concat user-emacs-directory "/vendor/cider"))
+(require 'cider)
+
+;; Turn on the goodies for clojure-mode (and cider-repl-mode).
 (dolist (attachment-point '(clojure-mode-hook
-                            nrepl-mode-hook))
+                            cider-repl-mode-hook))
   (dolist (hook '(paredit-mode
                   rainbow-delimiters-mode))
     (add-hook attachment-point hook)))
@@ -8,7 +12,10 @@
 ;; Use Clojure syntax highlighting in the REPL buffer.
 (dolist (hook '(use-clojure-colors
                 use-clojure-indent))
-  (add-hook 'nrepl-mode-hook hook))
+  (add-hook 'cider-repl-mode-hook hook))
 
 ;; Supply ElDoc-style help in nREPL-connected Clojure buffers.
-(add-hook 'nrepl-interaction-mode-hook 'nrepl-turn-on-eldoc-mode)
+(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+
+;; Store REPL history in a file.
+(setq cider-repl-history-file (concat user-emacs-directory "/cider-history"))

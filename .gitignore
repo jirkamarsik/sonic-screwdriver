@@ -2,6 +2,7 @@
 .smex-items
 auto-save-list
 backups
+cider-history
 elpa
 eshell
 ido.last
@@ -9,3 +10,4 @@ places
 recentf
 session.*
 tmp
+url

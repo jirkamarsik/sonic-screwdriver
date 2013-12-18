@@ -1,6 +1,6 @@
 ;; Include my configuration scripts and vendor code to the load-path.
-(add-to-list 'load-path "~/.emacs.d/my-conf")
-(add-to-list 'load-path "~/.emacs.d/vendor")
+(add-to-list 'load-path (concat user-emacs-directory "/my-conf"))
+(add-to-list 'load-path (concat user-emacs-directory "/vendor"))
 
 ;; Load all the parts of my configuration.
 (dolist (section-name '("defuns"

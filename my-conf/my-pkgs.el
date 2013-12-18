@@ -2,6 +2,9 @@
 (require 'package)
 (add-to-list 'package-archives
   '("melpa" . "http://melpa.milkbox.net/packages/") t)
+;; Also add Marmalade (e.g. for nrepl-discover).
+(add-to-list 'package-archives
+  '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (package-initialize)
 
 ;; Download the package list from MELPA.
@@ -20,7 +23,9 @@
                       idle-highlight-mode
                       elisp-slime-nav
                       clojure-mode
-                      nrepl
+                      dash                  ; CIDER dependency
+                      pkg-info              ; CIDER dependency
+                      nrepl-discover
                       haskell-mode
                       git-gutter
                       markdown-mode
