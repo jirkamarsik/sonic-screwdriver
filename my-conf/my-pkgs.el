@@ -25,12 +25,12 @@
                       clojure-mode
                       dash                  ; CIDER dependency
                       pkg-info              ; CIDER dependency
-                      nrepl-discover
                       haskell-mode
                       git-gutter
                       markdown-mode
                       solarized-theme
-                      scala-mode2)
+                      scala-mode2
+                      s)
   "A list of packages that should be installed.")
 
 ;; Check and install all the packages.

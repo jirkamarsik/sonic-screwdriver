@@ -19,3 +19,7 @@
 (defun use-clojure-indent ()
   "Sets the indentation behavior of the buffer to that of clojure-mode."
   (set (make-local-variable lisp-indent-function) 'clojure-indent-function))
+
+(defun replace-region (beg end)
+  "Replaces the current region (given also by beg and end
+  arguments as with (interactive \"r\") ")

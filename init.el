@@ -5,12 +5,14 @@
 ;; Load all the parts of my configuration.
 (dolist (section-name '("defuns"
                         "pkgs"
+                        "libs"
                         "ido"
                         "smex"
                         "evil"
                         "prog"
                         "elisp"
                         "clojure"
+                        "tardis"
                         "haskell"
                         "spell"
                         "text"
@@ -18,9 +20,9 @@
                         "markdown"
                         "git"
                         "misc"
-                        "bindings"
-                        "tardis"
-                        "org"))
+                        "org"
+                        "temps"
+                        "bindings"))
   (load (concat "my-" section-name)))
 
 
