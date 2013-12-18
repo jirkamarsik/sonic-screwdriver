@@ -1,8 +1,11 @@
+.#ido.last
 .smex-items
 auto-save-list
 backups
 elpa
+eshell
 ido.last
 places
 recentf
+session.*
 tmp
