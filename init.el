@@ -19,7 +19,8 @@
                         "git"
                         "misc"
                         "bindings"
-                        "tardis"))
+                        "tardis"
+                        "org"))
   (load (concat "my-" section-name)))
 
 
