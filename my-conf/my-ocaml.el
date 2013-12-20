@@ -25,5 +25,6 @@
 (add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
 
 (require 'ocp-indent)
-(require 'merlin)
 
+(require 'merlin)
+(add-hook 'tuareg-mode-hook 'merlin-mode)
