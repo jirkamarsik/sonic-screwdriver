@@ -14,6 +14,8 @@
                         "clojure"
                         "tardis"
                         "haskell"
+                        "ocaml"
+                        "eff"
                         "spell"
                         "text"
                         "latex"

@@ -31,7 +31,8 @@
                       solarized-theme
                       scala-mode2
                       s
-                      tuareg)
+                      tuareg
+                      idris-mode)
   "A list of packages that should be installed.")
 
 ;; Check and install all the packages.
