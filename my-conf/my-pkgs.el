@@ -30,7 +30,8 @@
                       markdown-mode
                       solarized-theme
                       scala-mode2
-                      s)
+                      s
+                      tuareg)
   "A list of packages that should be installed.")
 
 ;; Check and install all the packages.
