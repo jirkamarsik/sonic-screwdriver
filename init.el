@@ -21,9 +21,10 @@
                         "latex"
                         "markdown"
                         "git"
+                        "coq"
+                        "science"
                         "misc"
                         "org"
-                        "coq"
                         "temps"
                         "bindings"))
   (load (concat "my-" section-name)))
