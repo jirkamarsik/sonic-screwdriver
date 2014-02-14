@@ -22,6 +22,7 @@
                         "markdown"
                         "git"
                         "coq"
+                        "agda"
                         "science"
                         "misc"
                         "org"
