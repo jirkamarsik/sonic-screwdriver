@@ -1,0 +1,3 @@
+[submodule "vendor/clomacs"]
+	path = vendor/clomacs
+	url = https://github.com/clojure-emacs/clomacs.git
