@@ -14,6 +14,7 @@
                         "clojure"
                         "tardis"
                         "haskell"
+                        "flycheck"
                         "ocaml"
                         "eff"
                         "spell"
