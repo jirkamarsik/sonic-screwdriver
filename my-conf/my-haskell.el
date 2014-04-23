@@ -4,7 +4,7 @@
 
 
 ;; Structured Haskell Mode
-(add-hook 'haskell-mode-hook 'structured-haskell-mode)
+;(add-hook 'haskell-mode-hook 'structured-haskell-mode)
 
 (eval-after-load "shm"
   '(progn
