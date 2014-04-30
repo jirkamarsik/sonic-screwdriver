@@ -26,6 +26,9 @@
                       dash                  ; CIDER dependency
                       pkg-info              ; CIDER dependency
                       haskell-mode
+                      shm
+                      flycheck
+                      flycheck-hdevtools
                       git-gutter
                       markdown-mode
                       solarized-theme
