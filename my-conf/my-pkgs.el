@@ -35,7 +35,8 @@
                       scala-mode2
                       s
                       tuareg
-                      idris-mode)
+                      idris-mode
+                      elm-mode)
   "A list of packages that should be installed.")
 
 ;; Check and install all the packages.
