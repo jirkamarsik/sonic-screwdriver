@@ -1,3 +1,2 @@
-(add-to-list 'load-path (concat user-emacs-directory "/vendor/agda-mode/"))
-
-(require 'agda2)
+(load-file (let ((coding-system-for-read 'utf-8))
+                (shell-command-to-string "agda-mode locate")))
