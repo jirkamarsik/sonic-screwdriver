@@ -15,5 +15,5 @@
   newline."
   (interactive)
   (simplify-sexp-formula-at-point)
-  (evil-forward-char)
-  (newline-and-indent))
+  (search-forward "(")
+  (backward-char))
