@@ -28,7 +28,7 @@
                       haskell-mode
                       shm
                       flycheck
-                      flycheck-hdevtools
+                      flycheck-haskell
                       git-gutter
                       markdown-mode
                       solarized-theme
