@@ -1,7 +1,7 @@
 ;; Setup package.el to use MELPA (http://melpa.milkbox.net/).
 (require 'package)
 (add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  '("melpa" . "http://melpa-stable.milkbox.net/packages/") t)
 ;; Also add Marmalade (e.g. for nrepl-discover).
 (add-to-list 'package-archives
   '("marmalade" . "http://marmalade-repo.org/packages/") t)
