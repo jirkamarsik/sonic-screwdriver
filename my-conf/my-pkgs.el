@@ -36,7 +36,8 @@
                       s
                       tuareg
                       idris-mode
-                      elm-mode)
+                      elm-mode
+                      fsharp-mode)
   "A list of packages that should be installed.")
 
 ;; Check and install all the packages.
