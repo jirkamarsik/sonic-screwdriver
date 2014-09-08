@@ -26,12 +26,24 @@
 
   ;; Setting up ocp-indent and merlin from OPAM
 
-  (setq opam-share (substring (shell-command-to-string "opam config var share") 0 -1))
+  (setq opam-share (substring (shell-command-to-string "opam config var share 2> /dev/null") 0 -1))
   (add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
 
+  ;; ocp-indent
   (require 'ocp-indent)
 
+  ;; merlin
+  ;; Load merlin-mode
   (require 'merlin)
-  (add-hook 'tuareg-mode-hook 'merlin-mode))
+  
+  ;; Start merlin on ocaml files
+  (add-hook 'tuareg-mode-hook 'merlin-mode t)
+  (add-hook 'caml-mode-hook 'merlin-mode t)
+  
+  ;; Enable auto-complete
+  (setq merlin-use-auto-complete-mode 'easy)
+  
+  ;; Use opam switch to lookup ocamlmerlin binary
+  (setq merlin-command 'opam))
 
 (eval-after-load 'tuareg (function initialize-my-ocaml))
