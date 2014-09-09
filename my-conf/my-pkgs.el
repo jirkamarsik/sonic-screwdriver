@@ -26,6 +26,7 @@
                       dash                  ; CIDER dependency
                       pkg-info              ; CIDER dependency
                       haskell-mode
+                      ghc
                       shm
                       flycheck
                       flycheck-haskell
