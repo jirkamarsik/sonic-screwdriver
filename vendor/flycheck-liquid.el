@@ -44,7 +44,7 @@
 
 See URL `https://github.com/ucsd-progsys/liquidhaskell'."
   :command
-  ("cabal exec -- liquid" (option-flag "--diffcheck" flycheck-liquid-diffcheck) source-inplace)
+  ("cabal" "exec" "--" "liquid" "--smtsolver=cvc4" (option-flag "--diffcheck" flycheck-liquid-diffcheck) source-inplace)
   ;; ("~/bin/Checker.hs" source-inplace)
   :error-patterns
   (
