@@ -25,32 +25,32 @@
 
 
 ;; Install the desired packages.
-(defvar my-packages '(better-defaults
-                      ido-ubiquitous
-                      smex
-                      evil
-                      undo-tree
-                      paredit
-                      evil-paredit
-                      rainbow-delimiters
-                      idle-highlight-mode
-                      elisp-slime-nav
-                      clojure-mode
-                      cider
-                      haskell-mode
-                      ghc
-                      shm
-                      flycheck
-                      flycheck-haskell
-                      git-gutter
-                      markdown-mode
-                      solarized-theme
-                      s
-                      tuareg
-                      idris-mode
-                      elm-mode
-                      fsharp-mode)
-  "A list of packages that should be installed.")
+(setq my-packages '(better-defaults
+                    ido-ubiquitous
+                    smex
+                    evil
+                    undo-tree
+                    paredit
+                    evil-paredit
+                    rainbow-delimiters
+                    idle-highlight-mode
+                    elisp-slime-nav
+                    clojure-mode
+                    cider
+                    haskell-mode
+                    ghc
+                    shm
+                    flycheck
+                    flycheck-haskell
+                    git-gutter
+                    markdown-mode
+                    solarized-theme
+                    s
+                    tuareg
+                    idris-mode
+                    elm-mode
+                    fsharp-mode
+                    nix-mode))
 
 
 ;; Check and install all the packages.
