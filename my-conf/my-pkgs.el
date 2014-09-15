@@ -33,7 +33,6 @@
                       git-gutter
                       markdown-mode
                       solarized-theme
-                      scala-mode2
                       s
                       tuareg
                       idris-mode
