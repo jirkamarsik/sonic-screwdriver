@@ -46,4 +46,5 @@
   ;; Use opam switch to lookup ocamlmerlin binary
   (setq merlin-command 'opam))
 
-(eval-after-load 'tuareg (function initialize-my-ocaml))
+(when (every executable-find '("opam" "utop" "merlin" "ocp-indent"))
+  (eval-after-load 'tuareg (function initialize-my-ocaml)))
