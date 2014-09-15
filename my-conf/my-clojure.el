@@ -1,7 +1,3 @@
-;; Loading my manual installation of CIDER.
-(add-to-list 'load-path (concat user-emacs-directory "/vendor/cider"))
-(require 'cider)
-
 ;; Turn on the goodies for clojure-mode (and cider-repl-mode).
 (dolist (attachment-point '(clojure-mode-hook
                             cider-repl-mode-hook))

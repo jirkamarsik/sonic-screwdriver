@@ -32,6 +32,7 @@
     "type"
     "signature"
     "lexicon"
+    "nl_lexicon"
     "<<")
   '(
     ; FIXME while this regexp correctly capture multi-line comments,
@@ -49,6 +50,17 @@
     ("\\(lexicon\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\((\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\()\\)[ \n\t]*\\(:\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(=\\)" 6 'font-lock-keyword-face)
     ("\\(lexicon\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\((\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\()\\)[ \n\t]*\\(:\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(=\\)" 7 'font-lock-constant-face)
     ("\\(lexicon\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\((\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\()\\)[ \n\t]*\\(:\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(=\\)" 8 'font-lock-keyword-face)
+
+
+    ("\\(nl_lexicon\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\((\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\()\\)[ \n\t]*\\(:\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(=\\)" 1 'font-lock-keyword-face)
+    ("\\(nl_lexicon\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\((\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\()\\)[ \n\t]*\\(:\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(=\\)" 2 'font-lock-constant-face)
+    ("\\(nl_lexicon\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\((\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\()\\)[ \n\t]*\\(:\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(=\\)" 3 'font-lock-keyword-face)
+    ("\\(nl_lexicon\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\((\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\()\\)[ \n\t]*\\(:\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(=\\)" 4 'font-lock-constant-face)
+    ("\\(nl_lexicon\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\((\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\()\\)[ \n\t]*\\(:\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(=\\)" 5 'font-lock-keyword-face)
+    ("\\(nl_lexicon\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\((\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\()\\)[ \n\t]*\\(:\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(=\\)" 6 'font-lock-keyword-face)
+    ("\\(nl_lexicon\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\((\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\()\\)[ \n\t]*\\(:\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(=\\)" 7 'font-lock-constant-face)
+    ("\\(nl_lexicon\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\((\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\()\\)[ \n\t]*\\(:\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(=\\)" 8 'font-lock-keyword-face)
+
     ("\\(lexicon\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(=\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(<<\\)" 1 'font-lock-keyword-face)
     ("\\(lexicon\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(=\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(<<\\)" 2 'font-lock-constant-face)
     ("\\(lexicon\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(=\\)[ \n\t]*\\([a-zA-Z0-9_']*\\)[ \n\t]*\\(<<\\)" 3 'font-lock-keyword-face)
@@ -224,6 +236,10 @@ possible."
 ; declaration on the line and that for each declaration (or
 ; definition) not to have anything else after the closing ";"
 
+; To allow the algorithm work with long files.
+(setq max-lisp-eval-depth 10000)
+
+
 ;(make-local-variable 'indent-line-function)
 (setq indent-line-function 'acg-indent-line)
 
@@ -329,6 +345,15 @@ possible."
 		   )
 		  ((looking-at "^.*;[ \t]*$")
 		   (setq cur-indent  acg-default-indent)
+		   )
+		  ((looking-at "^.*,[ \t]*$")
+		   (if (= (current-indentation) acg-default-indent)
+		       (setq cur-indent  (+ (current-indentation) acg-default-indent))
+		     (setq cur-indent  (current-indentation))
+		     )
+		   )
+		  ((looking-at "^.*\\(->\\|\.\\)[ \t]*$")
+		   (setq cur-indent  (+ (current-indentation) acg-default-indent))
 		   )
 		  (t
 		   (setq cur-indent (+ acg-default-indent acg-default-indent))
