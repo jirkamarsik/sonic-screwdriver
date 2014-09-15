@@ -23,8 +23,7 @@
                       idle-highlight-mode
                       elisp-slime-nav
                       clojure-mode
-                      dash                  ; CIDER dependency
-                      pkg-info              ; CIDER dependency
+                      cider
                       haskell-mode
                       ghc
                       shm
