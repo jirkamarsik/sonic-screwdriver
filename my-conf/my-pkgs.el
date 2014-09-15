@@ -50,7 +50,7 @@
   "A list of packages that should be installed.")
 
 ;; Use ghc from MELPA-STABLE so that it is in line with cabal ghc-mod.
-(setq package-archive-exclude-alist '(("melpa-stable" . (ghc))))
+(setq package-archive-exclude-alist '(("melpa" . (ghc))))
 
 ;; Check and install all the packages.
 (dolist (p my-packages)
