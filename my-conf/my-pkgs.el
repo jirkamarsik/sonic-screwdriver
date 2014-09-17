@@ -1,4 +1,4 @@
-;; Setup package.el to use Melpa, Melpa-stable and Marmalade.
+;; Setup package.el to use melpa, melpa-stable and marmalade.
 (require 'package)
 
 (add-to-list 'package-archives
@@ -12,8 +12,9 @@
 ;; Install and setup package-filter before fetching arhive contents...
 (require 'package-filter)
 
-;; Use ghc from MELPA-STABLE so that it is in line with cabal ghc-mod.
-(setq package-archive-exclude-alist '(("melpa" . (ghc))))
+;; Use some plugins from melpa-stable so that they align with proper
+;; versions of server components.
+(setq package-archive-exclude-alist '(("melpa" . (cider ghc))))
 
 
 ;; Load the archive contents.

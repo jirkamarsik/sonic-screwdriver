@@ -11,7 +11,7 @@
 (defun use-clojure-colors ()
   "Configures Clojure-style font-lock in the current buffer."
   (font-lock-mode nil)
-  (clojure-mode-font-lock-setup)
+  (clojure-font-lock-setup)
   (font-lock-mode t))
 
 ;; Use Clojure indentation rules in the current buffer.
