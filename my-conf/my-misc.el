@@ -4,8 +4,8 @@
 ;; Flash the frame on bell.
 (setq visible-bell t)
 
-;; Set fill column limit to 78 (instead of the default 70).
-(setq-default fill-column 78)
+;; Set fill column limit to 75 (instead of the default 70).
+(setq-default fill-column 75)
 
 ;; Always show column number as well as line number.
 (column-number-mode)
