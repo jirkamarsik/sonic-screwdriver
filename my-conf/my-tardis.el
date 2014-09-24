@@ -1,3 +1,5 @@
+(require 's)
+
 ;; We use Clomacs to generate wrappers which let us easily communicate with
 ;; the TARDIS.
 (add-to-list 'load-path

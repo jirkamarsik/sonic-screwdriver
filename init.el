@@ -3,9 +3,8 @@
 (add-to-list 'load-path (concat user-emacs-directory "/vendor"))
 
 ;; Load all the parts of my configuration.
-(dolist (section-name '("defuns"
-                        "pkgs"
-                        "libs"
+(dolist (section-name '("pkgs"
+                        "defuns"
                         "ido"
                         "smex"
                         "evil"

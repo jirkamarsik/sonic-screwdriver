@@ -29,6 +29,9 @@
 (setq my-packages '(better-defaults
                     ido-ubiquitous
                     smex
+                    dash
+                    s
+                    f
                     evil
                     undo-tree
                     paredit
