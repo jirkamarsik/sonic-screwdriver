@@ -3,9 +3,8 @@
 (add-to-list 'load-path (concat user-emacs-directory "/vendor"))
 
 ;; Load all the parts of my configuration.
-(dolist (section-name '("defuns"
-                        "pkgs"
-                        "libs"
+(dolist (section-name '("pkgs"
+                        "defuns"
                         "ido"
                         "smex"
                         "evil"
@@ -39,15 +38,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (solarized-dark)))
- '(agda2-include-dirs (quote ("." "/home/jirka/Projects/cufp/agda-prelude/src")))
  '(browse-url-browser-function (quote browse-url-generic))
  '(custom-safe-themes
    (quote
     ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
- '(haskell-process-type (quote cabal-repl))
- '(idris-interpreter-path
-   "/home/jirka/cabal-sandboxes/Idris/.cabal-sandbox/bin/idris"))
+ '(haskell-process-type (quote cabal-repl)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -55,3 +50,7 @@
  ;; If there is more than one, they won't work right.
  )
 (put 'downcase-region 'disabled nil)
+
+
+;; Load machine-specific customizations.
+(load-file "machines.el")

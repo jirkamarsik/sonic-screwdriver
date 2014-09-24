@@ -30,7 +30,7 @@
 
 
 ;; ghc-mod
-(when (executable-find "ghc-mod")
+(proceed-with-executable "ghc-mod"
   (autoload 'ghc-init "ghc" nil t)
   (autoload 'ghc-debug "ghc" nil t)
   (add-hook 'haskell-mode-hook (lambda () (ghc-init))))
