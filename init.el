@@ -53,4 +53,5 @@
 
 
 ;; Load machine-specific customizations.
-(load-file "machines.el")
+(add-to-list 'load-path user-emacs-directory)
+(load "machines")
