@@ -12,3 +12,6 @@
 
 ;; Always highlight the current line.
 (global-hl-line-mode)
+
+;; Initiate GC on allocating every 20 MB, instead of 0.76 MB
+(setq gc-cons-threshold 20000000)

@@ -28,6 +28,7 @@
 ;; Install the desired packages.
 (setq my-packages '(better-defaults
                     ido-ubiquitous
+                    flx-ido
                     smex
                     dash
                     s
