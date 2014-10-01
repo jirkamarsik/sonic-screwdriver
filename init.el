@@ -7,6 +7,7 @@
                         "defuns"
                         "ido"
                         "smex"
+                        "projectile"
                         "evil"
                         "prog"
                         "elisp"

@@ -30,6 +30,7 @@
                     ido-ubiquitous
                     flx-ido
                     smex
+                    projectile
                     dash
                     s
                     f
