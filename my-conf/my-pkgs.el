@@ -9,12 +9,15 @@
   '("marmalade" . "http://marmalade-repo.org/packages/") t)
 
 
-;; Install and setup package-filter before fetching arhive contents...
-(require 'package-filter)
-
 ;; Use some plugins from melpa-stable so that they align with proper
 ;; versions of server components.
-(setq package-archive-exclude-alist '(("melpa" . (cider ghc))))
+(if (version< emacs-version "24.4")
+  (progn
+    (require 'package-filter)
+    (setq package-archive-exclude-alist '(("melpa" . (cider ghc)))))
+  (progn
+    (setq package-pinned-packages '((cider . "melpa")
+                                    (ghc . "melpa")))))
 
 
 ;; Load the archive contents.
