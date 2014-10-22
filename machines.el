@@ -3,7 +3,9 @@
 
 (defvar on-honey-badger (s-contains? system-name "honey-badger"))
 (defvar in-linux (eq system-type 'gnu/linux))
-(defvar debian (and on-honey-badger in-linux))
+(defvar debian (and in-linux on-honey-badger))
+(defvar nixos (and in-linux (not on-honey-badger)))
+(defvar windows (not in-linux))
 
 
 ;; Use solarized-light on honey-badger's Debian, otherwise use
@@ -21,4 +23,5 @@
 ;; Set the Idris interpreter path accordingly.
 (custom-set-variables
  '(idris-interpreter-path
-   (cond (debian "/home/jirka/cabal-sandboxes/Idris/.cabal-sandbox/bin/idris"))))
+   (cond (debian "/home/jirka/cabal-sandboxes/Idris/.cabal-sandbox/bin/idris")
+         (nixos "/home/jirka/.nix-profile/bin/idris"))))
