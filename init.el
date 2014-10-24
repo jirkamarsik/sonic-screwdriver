@@ -28,7 +28,6 @@
                         "browser"
                         "misc"
                         "org"
-                        "temps"
                         "bindings"))
   (load (concat "my-" section-name)))
 
