@@ -24,7 +24,7 @@
                         "git"
                         "coq"
                         "agda"
-                        "science"
+                        "acg"
                         "browser"
                         "misc"
                         "org"
