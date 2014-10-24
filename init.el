@@ -29,8 +29,7 @@
                         "misc"
                         "org"
                         "temps"
-                        "bindings"
-                        "machines"))
+                        "bindings"))
   (load (concat "my-" section-name)))
 
 
@@ -52,3 +51,5 @@
  ;; If there is more than one, they won't work right.
  )
 (put 'downcase-region 'disabled nil)
+
+(load "my-machines")
