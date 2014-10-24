@@ -29,7 +29,8 @@
                         "misc"
                         "org"
                         "temps"
-                        "bindings"))
+                        "bindings"
+                        "machines"))
   (load (concat "my-" section-name)))
 
 
@@ -51,8 +52,3 @@
  ;; If there is more than one, they won't work right.
  )
 (put 'downcase-region 'disabled nil)
-
-
-;; Load machine-specific customizations.
-(add-to-list 'load-path user-emacs-directory)
-(load "machines")
