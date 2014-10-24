@@ -16,8 +16,8 @@
     (require 'package-filter)
     (setq package-archive-exclude-alist '(("melpa" . (cider ghc)))))
   (progn
-    (setq package-pinned-packages '((cider . "melpa")
-                                    (ghc . "melpa")))))
+    (setq package-pinned-packages '((cider . "melpa-stable")
+                                    (ghc . "melpa-stable")))))
 
 
 ;; Load the archive contents.
