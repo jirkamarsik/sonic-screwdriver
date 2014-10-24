@@ -54,7 +54,6 @@
                     git-gutter
                     markdown-mode
                     solarized-theme
-                    s
                     tuareg
                     idris-mode
                     elm-mode
