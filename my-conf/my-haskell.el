@@ -5,17 +5,16 @@
 
 
 ;; Structured Haskell Mode
-;(add-hook 'haskell-mode-hook 'structured-haskell-mode)
+(proceed-with-executable "structured-haskell-mode"
 
-(eval-after-load "shm"
-  '(progn
-     ;; Adapt Structured Haskell Mode colours to Solarized Light
-     (set-face-background 'shm-current-face "#eee8d5")
-     (set-face-background 'shm-current-face "lemonchiffron")
+  (autoload 'structured-haskell-mode "shm")
+  ;(add-hook 'haskell-mode-hook 'structured-haskell-mode)
 
-     ;; Use haskell-interactive-mode to enable case-split
-     (require 'shm-case-split)
-     (define-key shm-map (kbd "C-c C-s") 'shm/case-split)))
+  (eval-after-load "shm"
+    '(progn
+       ;; Use haskell-interactive-mode to enable case-split
+       (require 'shm-case-split)
+       (define-key shm-map (kbd "C-c C-s") 'shm/case-split))))
 
 
 ;; Use haskell-interactive-mode instead of inferior-haskell-mode
