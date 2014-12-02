@@ -11,7 +11,7 @@
 
 ;; Use some plugins from melpa-stable so that they align with proper
 ;; versions of server components.
-(if (version< emacs-version "24.4")
+(if (version< emacs-version "24.3.50.1")
   (progn
     (require 'package-filter)
     (setq package-archive-exclude-alist '(("melpa" . (cider ghc)))))
