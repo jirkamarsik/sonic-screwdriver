@@ -1,6 +1,10 @@
 ;; Getting rid of the "Welcome to Emacs!" screen.
 (setq inhibit-splash-screen t)
 
+;; No scrollbars
+(scroll-bar-mode 0)
+(horizontal-scroll-bar-mode 0)
+
 ;; Flash the frame on bell.
 (setq visible-bell t)
 
