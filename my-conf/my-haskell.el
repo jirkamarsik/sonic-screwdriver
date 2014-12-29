@@ -28,6 +28,14 @@
 (define-key haskell-mode-map (kbd "C-c C-d") nil)
 
 
+;; Keybinding for ghci-ng
+(eval-after-load "haskell-mode"
+  '(progn
+     (define-key interactive-haskell-mode-map (kbd "M-.") 'haskell-mode-goto-loc)
+     (define-key interactive-haskell-mode-map (kbd "C-c C-t") 'haskell-mode-show-type-at)
+     (define-key interactive-haskell-mode-map (kbd "C-?") 'haskell-mode-find-uses)))
+
+
 ;; ghc-mod
 (proceed-with-executable "ghc-mod"
   (autoload 'ghc-init "ghc" nil t)
