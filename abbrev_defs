@@ -1,6 +1,8 @@
 ;;-*-coding: utf-8;-*-
 (define-abbrev-table 'Buffer-menu-mode-abbrev-table '())
 
+(define-abbrev-table 'Info-edit-mode-abbrev-table '())
+
 (define-abbrev-table 'apropos-mode-abbrev-table '())
 
 (define-abbrev-table 'calendar-mode-abbrev-table '())
@@ -19,9 +21,17 @@
 
 (define-abbrev-table 'completion-list-mode-abbrev-table '())
 
+(define-abbrev-table 'debugger-mode-abbrev-table '())
+
+(define-abbrev-table 'edit-abbrevs-mode-abbrev-table '())
+
 (define-abbrev-table 'emacs-lisp-byte-code-mode-abbrev-table '())
 
 (define-abbrev-table 'emacs-lisp-mode-abbrev-table '())
+
+(define-abbrev-table 'ert-results-mode-abbrev-table '())
+
+(define-abbrev-table 'ert-simple-view-mode-abbrev-table '())
 
 (define-abbrev-table 'evil-command-window-mode-abbrev-table '())
 
@@ -31,9 +41,13 @@
 
 (define-abbrev-table 'global-abbrev-table '())
 
+(define-abbrev-table 'grep-mode-abbrev-table '())
+
 (define-abbrev-table 'haskell-cabal-mode-abbrev-table '())
 
 (define-abbrev-table 'haskell-compilation-mode-abbrev-table '())
+
+(define-abbrev-table 'haskell-debug-mode-abbrev-table '())
 
 (define-abbrev-table 'haskell-error-mode-abbrev-table '())
 
@@ -45,15 +59,21 @@
 
 (define-abbrev-table 'help-mode-abbrev-table '())
 
-(define-abbrev-table 'inferior-haskell-mode-abbrev-table '())
+(define-abbrev-table 'ibuffer-mode-abbrev-table '())
 
-(define-abbrev-table 'inferior-lisp-mode-abbrev-table '())
+(define-abbrev-table 'inferior-haskell-mode-abbrev-table '())
 
 (define-abbrev-table 'lisp-mode-abbrev-table '())
 
 (define-abbrev-table 'literate-haskell-mode-abbrev-table '())
 
+(define-abbrev-table 'message-mode-abbrev-table '())
+
+(define-abbrev-table 'messages-buffer-mode-abbrev-table '())
+
 (define-abbrev-table 'nrepl-connections-buffer-mode-abbrev-table '())
+
+(define-abbrev-table 'nrepl-messages-mode-abbrev-table '())
 
 (define-abbrev-table 'occur-edit-mode-abbrev-table '())
 
@@ -84,6 +104,8 @@
 (define-abbrev-table 'tar-mode-abbrev-table '())
 
 (define-abbrev-table 'text-mode-abbrev-table '())
+
+(define-abbrev-table 'url-cookie-mode-abbrev-table '())
 
 (define-abbrev-table 'vc-git-log-edit-mode-abbrev-table '())
 
