@@ -49,6 +49,7 @@
                     haskell-mode
                     ghc
                     shm
+                    hindent
                     flycheck
                     flycheck-haskell
                     git-gutter
