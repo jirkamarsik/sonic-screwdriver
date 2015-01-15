@@ -3,7 +3,8 @@
 
 ;; No scrollbars
 (scroll-bar-mode 0)
-(horizontal-scroll-bar-mode 0)
+(if (fboundp 'horizontal-scroll-bar-mode)
+  (horizontal-scroll-bar-mode 0))
 
 ;; Flash the frame on bell.
 (setq visible-bell t)
