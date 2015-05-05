@@ -23,6 +23,7 @@
                         "flycheck"
                         "ocaml"
                         "eff"
+                        "prolog"
                         "spell"
                         "text"
                         "latex"
