@@ -59,7 +59,7 @@
     (nixos "/home/jirka/.nix-profile/bin/idris")))
  '(package-selected-packages
    (quote
-    (nix-mode fsharp-mode elm-mode idris-mode tuareg solarized-theme markdown-mode git-gutter flycheck-haskell flycheck hindent shm ghc haskell-mode cider clojure-mode elisp-slime-nav idle-highlight-mode rainbow-delimiters evil-paredit paredit evil f s projectile smex flx-ido ido-ubiquitous better-defaults))))
+    (coffee-mode nix-mode fsharp-mode elm-mode idris-mode tuareg solarized-theme markdown-mode git-gutter flycheck-haskell flycheck hindent shm ghc haskell-mode cider clojure-mode elisp-slime-nav idle-highlight-mode rainbow-delimiters evil-paredit paredit evil f s projectile smex flx-ido ido-ubiquitous better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

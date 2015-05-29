@@ -59,6 +59,7 @@
                     idris-mode
                     elm-mode
                     fsharp-mode
+                    coffee-mode
                     nix-mode))
 
 
