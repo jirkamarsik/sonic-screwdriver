@@ -32,6 +32,7 @@
                         "coq"
                         "agda"
                         "acg"
+                        "purescript"
                         "browser"
                         "misc"
                         "org"
@@ -45,7 +46,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(agda2-include-dirs (quote ("." "/home/jirka/.nix-profile/share/agda")))
+ '(agda2-include-dirs (quote ("." "/home/jirka/Projects/cufp/agda-prelude/src")))
  '(browse-url-browser-function (quote browse-url-generic))
  '(custom-enabled-themes (quote (solarized-dark)))
  '(custom-safe-themes
@@ -54,12 +55,10 @@
  '(haskell-process-type (quote cabal-repl))
  '(hindent-style "chris-done")
  '(idris-interpreter-path
-   (cond
-    (debian "/home/jirka/cabal-sandboxes/Idris/.cabal-sandbox/bin/idris")
-    (nixos "/home/jirka/.nix-profile/bin/idris")))
+   "/home/jirka/cabal-sandboxes/Idris/.cabal-sandbox/bin/idris")
  '(package-selected-packages
    (quote
-    (coffee-mode nix-mode fsharp-mode elm-mode idris-mode tuareg solarized-theme markdown-mode git-gutter flycheck-haskell flycheck hindent shm ghc haskell-mode cider clojure-mode elisp-slime-nav idle-highlight-mode rainbow-delimiters evil-paredit paredit evil f s projectile smex flx-ido ido-ubiquitous better-defaults))))
+    (psci purescript-mode coffee-mode nix-mode fsharp-mode elm-mode idris-mode tuareg solarized-theme markdown-mode git-gutter flycheck-haskell flycheck hindent shm ghc haskell-mode cider clojure-mode elisp-slime-nav idle-highlight-mode rainbow-delimiters evil-paredit paredit evil f s projectile smex flx-ido ido-ubiquitous better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

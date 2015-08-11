@@ -60,6 +60,8 @@
                     elm-mode
                     fsharp-mode
                     coffee-mode
+                    purescript-mode
+                    psci
                     nix-mode))
 
 
