@@ -31,6 +31,8 @@
 
 (define-abbrev-table 'elisp-byte-code-mode-abbrev-table '())
 
+(define-abbrev-table 'emacs-lisp-byte-code-mode-abbrev-table '())
+
 (define-abbrev-table 'emacs-lisp-mode-abbrev-table '())
 
 (define-abbrev-table 'ert-results-mode-abbrev-table '())
@@ -44,6 +46,8 @@
 (define-abbrev-table 'fundamental-mode-abbrev-table '())
 
 (define-abbrev-table 'global-abbrev-table '())
+
+(define-abbrev-table 'grep-mode-abbrev-table '())
 
 (define-abbrev-table 'haskell-cabal-mode-abbrev-table '())
 
