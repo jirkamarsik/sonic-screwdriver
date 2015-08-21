@@ -4,7 +4,7 @@
 (defvar default-spell-check-lang "english"
   "Default language for spell-checking to use in new buffer.")
 
-(defvar other-spell-check-langs '("french")
+(defvar other-spell-check-langs '("francais")
   "Other languages to make available in the lang-ring.")
 
 (defun initialize-lang-ring ()
