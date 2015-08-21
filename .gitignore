@@ -1,5 +1,6 @@
 .#ido.last
 .smex-items
+abbrev_defs
 auto-save-list
 backups
 cider-history
