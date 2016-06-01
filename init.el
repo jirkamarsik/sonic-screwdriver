@@ -54,8 +54,7 @@
     ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(haskell-process-type (quote cabal-repl))
  '(hindent-style "chris-done")
- '(idris-interpreter-path
-   "/home/jirka/cabal-sandboxes/Idris/.cabal-sandbox/bin/idris")
+ '(idris-interpreter-path "/home/jirka/.nix-profile/bin/idris")
  '(package-selected-packages
    (quote
     (psci purescript-mode coffee-mode nix-mode fsharp-mode elm-mode idris-mode tuareg solarized-theme markdown-mode git-gutter flycheck-haskell flycheck hindent shm ghc haskell-mode cider clojure-mode elisp-slime-nav idle-highlight-mode rainbow-delimiters evil-paredit paredit evil f s projectile smex flx-ido ido-ubiquitous better-defaults))))
