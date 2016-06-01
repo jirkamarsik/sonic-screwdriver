@@ -62,6 +62,9 @@
                     coffee-mode
                     purescript-mode
                     psci
+                    auctex
+                    auctex-latexmk
+                    auctex-lua
                     nix-mode))
 
 
