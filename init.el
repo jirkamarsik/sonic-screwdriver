@@ -46,7 +46,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(agda2-include-dirs (quote ("." "/home/jirka/Projects/cufp/agda-prelude/src")))
+ '(agda2-include-dirs
+   (quote
+    ("." "/home/jirka/Projects/cufp/agda-prelude/src" "/home/jirka/Code/agda-stdlib/src")))
  '(browse-url-browser-function (quote browse-url-generic))
  '(custom-enabled-themes (quote (solarized-light)))
  '(custom-safe-themes
@@ -56,7 +58,8 @@
  '(idris-interpreter-path "/home/jirka/.nix-profile/bin/idris")
  '(package-selected-packages
    (quote
-    (psci purescript-mode coffee-mode nix-mode fsharp-mode elm-mode idris-mode tuareg solarized-theme markdown-mode git-gutter flycheck-haskell flycheck hindent shm ghc haskell-mode cider clojure-mode elisp-slime-nav idle-highlight-mode rainbow-delimiters evil-paredit paredit evil f s projectile smex flx-ido ido-ubiquitous better-defaults))))
+    (psci purescript-mode coffee-mode nix-mode fsharp-mode elm-mode idris-mode tuareg solarized-theme markdown-mode git-gutter flycheck-haskell flycheck hindent shm ghc haskell-mode cider clojure-mode elisp-slime-nav idle-highlight-mode rainbow-delimiters evil-paredit paredit evil f s projectile smex flx-ido ido-ubiquitous better-defaults)))
+ '(safe-local-variable-values (quote ((TeX-engine . pdflatex)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -66,3 +69,6 @@
 (put 'downcase-region 'disabled nil)
 
 (load "my-machines")
+
+(load-file (let ((coding-system-for-read 'utf-8))
+                (shell-command-to-string "agda-mode locate")))
