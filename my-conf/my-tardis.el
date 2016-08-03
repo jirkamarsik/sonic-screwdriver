@@ -4,6 +4,8 @@
 ;; the TARDIS.
 (add-to-list 'load-path
              (concat user-emacs-directory "/vendor/clomacs/src/elisp/"))
+;; 'cl provides 'assert, which is used by 'clomacs
+(require 'cl)
 (require 'clomacs)
 
 ;; We handle our connection to the TARDIS ourselves, no need to use the
