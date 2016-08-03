@@ -11,7 +11,7 @@
   (add-hook 'cider-repl-mode-hook hook))
 
 ;; Supply ElDoc-style help in nREPL-connected Clojure buffers.
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(add-hook 'cider-mode-hook 'eldoc-mode)
 
 ;; Store REPL history in a file.
 (setq cider-repl-history-file (concat user-emacs-directory "/cider-history"))
