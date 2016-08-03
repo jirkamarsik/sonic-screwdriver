@@ -26,7 +26,7 @@
   calls study-tardis to hook up Emacs commands to the functions
   it exposes."
   (interactive)
-  (cider "127.0.0.1" "22411")
+  (cider-connect "127.0.0.1" "22411" "/home/jirka/Projects/tardis")
   (study-tardis))
 
 
