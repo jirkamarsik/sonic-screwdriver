@@ -65,6 +65,7 @@
                     auctex
                     auctex-latexmk
                     auctex-lua
+                    racket-mode
                     nix-mode))
 
 
